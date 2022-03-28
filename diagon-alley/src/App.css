@@ -1,0 +1,25 @@
+@import url('https://nishasen-nembus-ui.netlify.app/styles.css');
+@import url('react-toastify/dist/ReactToastify.css');
+
+:root {
+    --gryffindor-main: #8C1926;
+    --gryffindor-dark: #F59300;
+    --gryffindor-background: #B75353;
+    --gryffindor-hover: #FFB647;
+
+    --hufflepuff-main: #2F2311;
+    --hufflepuff-dark: #DA9E00;
+    --hufflepuff-background: #BAA66C;
+    --hufflepuff-hover: #FACB4F;
+
+    --ravenclaw-main: #0B1E3F;
+    --ravenclaw-dark: #3E699C;
+    --ravenclaw-background: #284A78;
+    --ravenclaw-hover: #7d8c9c;
+
+    --slytherin-main: #0A190E;
+    --slytherin-dark: #1A6445;
+    --slytherin-background: #768A65;
+    --slytherin-hover: #639D7B;
+
+}
