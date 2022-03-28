@@ -1,6 +1,4 @@
-import { createContext, useContext, useReducer } from 'react';
-import { useEffect } from 'react/cjs/react.development';
-import { useAuth } from '..';
+import { createContext, useContext, useReducer, useEffect } from 'react';
 import { GetCart } from '../../APICall';
 import { Reducer } from './Reducer';
 

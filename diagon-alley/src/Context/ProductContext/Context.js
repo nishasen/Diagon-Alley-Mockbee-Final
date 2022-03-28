@@ -34,6 +34,7 @@ const DataProvider = ({children}) => {
         houseState: [],
         categoryState: [],
     });
+    
     const filteredData = Compose(
         state,
         setHouse,
