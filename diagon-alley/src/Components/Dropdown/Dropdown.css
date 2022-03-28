@@ -1,0 +1,32 @@
+.dropdown {
+    position: absolute;
+    top: 3rem;
+    background-color: rgba(0,0,0,.9);
+    width: 9rem;
+    z-index: 11;
+}
+
+.dropdown button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--st-secondary-disabled);
+    color: var(--st-primary-disabled);
+    cursor: pointer;
+}
+
+.text-size {
+    font-size: 1.2rem;
+    padding:0.2rem;
+    cursor: auto;
+}
+
+.dropdown button :nth-child(4) {
+    border-bottom: 2px solid transparent;
+}
+
+.dropdown button:hover {
+    font-weight: bold;
+}

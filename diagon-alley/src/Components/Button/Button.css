@@ -1,0 +1,63 @@
+.big-btn {
+    width: 12rem;
+}  
+
+.button {
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.button-border {
+    border: 2px solid;
+}
+
+.gryffindor-button {
+    background-color: var(--gryffindor-dark);
+    color: var(--gryffindor-main);
+}
+
+.gryffindor-button:hover {
+    background-color: var(--gryffindor-hover);
+}
+
+.hufflepuff-button {
+    background-color: var(--hufflepuff-dark);
+    color: var(--hufflepuff-main);
+}
+
+.hufflepuff-button:hover {
+    background-color: var(--hufflepuff-hover);
+}
+
+.ravenclaw-button {
+    background-color: var(--ravenclaw-dark);
+    color: var(--ravenclaw-main);
+}
+
+.ravenclaw-button:hover {
+    background-color: var(--ravenclaw-hover);
+}
+
+.slytherin-button {
+    background-color: var(--slytherin-dark);
+    color: var(--slytherin-main);
+}
+
+.slytherin-button:hover {
+    background-color: var(--slytherin-hover);
+}
+
+.disable-button {
+    background-color: grey;
+    cursor: wait;
+}
+
+.disable-button:hover {
+    background-color: grey;
+}

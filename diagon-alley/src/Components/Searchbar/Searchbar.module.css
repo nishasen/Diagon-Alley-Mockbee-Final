@@ -1,0 +1,25 @@
+.searchbar {
+    display: flex;
+    position: relative;
+    height: 2.5rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.search_box {
+    width: 100%;
+}
+
+.search_button {
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    padding: 1rem 2rem;
+    border: 2px solid;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

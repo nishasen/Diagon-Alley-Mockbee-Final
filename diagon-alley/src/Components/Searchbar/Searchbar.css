@@ -1,0 +1,35 @@
+.gryffindor-search {
+    background-color: var(--gryffindor-dark);
+    color: var(--gryffindor-main);
+}
+
+.hufflepuff-search {
+    background-color: var(--hufflepuff-dark);
+    color: var(--hufflepuff-main);
+}
+
+.ravenclaw-search {
+    background-color: var(--ravenclaw-dark);
+    color: var(--ravenclaw-main);
+}
+
+.slytherin-search {
+    background-color: var(--slytherin-dark);
+    color: var(--slytherin-main);
+}
+
+.gryffindor-search:hover {
+    background-color: var(--gryffindor-hover);
+}
+
+.hufflepuff-search:hover {
+    background-color: var(--hufflepuff-hover);
+}
+
+.ravenclaw-search:hover {
+    background-color: var(--ravenclaw-hover);
+}
+
+.slytherin-search:hover {
+    background-color: var(--slytherin-hover);
+}

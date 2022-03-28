@@ -1,0 +1,13 @@
+.checkbox-radio {
+    height: 1rem;
+    width: 1rem;
+}
+
+.box-space {
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.input-label {
+    font-weight: bold;
+}

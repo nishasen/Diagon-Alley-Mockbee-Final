@@ -1,0 +1,30 @@
+.home-wallpaper {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+}
+
+.gryffindor-bg {
+    background-color: var(--gryffindor-background);
+}
+
+.hufflepuff-bg {
+    background-color: var(--hufflepuff-background);
+}
+
+.ravenclaw-bg {
+    background-color: var(--ravenclaw-background);
+}
+
+.slytherin-bg {
+    background-color: var(--slytherin-background);
+}
+
+.bg-image {
+    opacity: 0.2;
+    width: 10rem;
+    filter: blur(0.5px)
+}
+
