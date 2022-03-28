@@ -1,0 +1,39 @@
+.category-button {
+    display: grid;
+    grid-template-columns: repeat(4, 12rem);
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.button-style {
+    border-radius: 1rem;
+    box-shadow: 1px 0px 2px 3px hsl(200deg 100% 15% / 10%);
+    background-color: hsla(0, 0%, 98%, 0.3);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    border: 4px solid;
+    padding: 1rem;
+}
+
+.image-size {
+    width: 10rem;
+    height: 13rem;
+}
+
+@media only screen and (max-width: 920px) {
+
+    .category-button {
+        grid-template-columns: repeat(2, 12rem);
+        row-gap: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 520px) {
+
+    .category-button {
+        grid-template-columns: repeat(1, 12rem);
+    }
+
+}

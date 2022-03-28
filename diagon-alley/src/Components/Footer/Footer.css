@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(0, 0%, 98%, 0.3);
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-icon {
+    color: var(--st-black);
+    font-size: 2rem;
+}
+
+.footer-icon:hover {
+    color: var(--st-darkgrey)
+}

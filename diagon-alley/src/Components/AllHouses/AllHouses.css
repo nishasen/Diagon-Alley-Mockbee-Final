@@ -1,0 +1,61 @@
+.all-houses {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    align-items: center;
+    padding: 1rem;
+}
+
+.all-housespane {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.houses-title {
+    background-color: hsla(0, 0%, 98%, 0.3);
+    margin: 0 3rem;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px var(--st-primary-color);
+}
+
+.gryffindor-title {
+    color: var(--gryffindor-main);
+    
+}
+
+.hufflepuff-title {
+    color: var(--hufflepuff-main);
+}
+
+.ravenclaw-title {
+    color: var(--ravenclaw-main);
+}
+
+.slytherin-title {
+    color: var(--slytherin-main);
+}
+
+@media only screen and (max-width: 920px) {
+
+    .all-housespane {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 520px) {
+
+    .all-housespane {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .houses-title {
+        font-size: 1.5rem;
+    } 
+}
+
+
