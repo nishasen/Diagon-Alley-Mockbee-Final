@@ -1,0 +1,19 @@
+.product-align {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 5rem;
+    margin-bottom: 2rem;
+}
+
+.loader {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+}  
+
+.wishlist-text {
+    margin-top: 3rem;
+    text-align: center;
+}
