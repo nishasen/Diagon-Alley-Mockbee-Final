@@ -1,0 +1,22 @@
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px var(--st-primary-color);
+    cursor: pointer;
+}
+
+.gryffindor-header {
+    color: var(--gryffindor-main);
+}
+
+.hufflepuff-header {
+    color: var(--hufflepuff-main);
+}
+
+.ravenclaw-header {
+    color: var(--ravenclaw-main);
+}
+
+.slytherin-header {
+    color: var(--slytherin-main);
+}

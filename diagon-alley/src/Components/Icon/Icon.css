@@ -1,0 +1,56 @@
+.icon-size {
+    width: 3rem;
+    height: 3rem;
+}
+
+.gryffindor-icon {
+    color: var(--gryffindor-dark);
+}
+
+.hufflepuff-icon {
+    color: var(--hufflepuff-dark);
+}
+
+.ravenclaw-icon {
+    color: var(--ravenclaw-dark);
+}
+
+.slytherin-icon {
+    color: var(--slytherin-dark);
+}
+
+.gryffindor-badge {
+    background-color: var(--gryffindor-main);
+    color: var(--st-white);
+}
+
+.hufflepuff-badge {
+    background-color: var(--hufflepuff-main);
+    color: var(--st-white);
+}
+
+.ravenclaw-badge {
+    background-color: var(--ravenclaw-main);
+    color: var(--st-white);
+}
+
+.slytherin-badge {
+    background-color: var(--slytherin-main);
+    color: var(--st-white);
+}
+
+.gryffindor-icon:hover {
+    color: var(--gryffindor-hover);
+}
+
+.hufflepuff-icon:hover {
+    color: var(--hufflepuff-hover);
+}
+
+.ravenclaw-icon:hover {
+    color: var(--ravenclaw-hover);
+}
+
+.slytherin-icon:hover {
+    color: var(--slytherin-hover);
+}
