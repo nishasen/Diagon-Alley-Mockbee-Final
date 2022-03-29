@@ -1,15 +1,15 @@
 export const SignupFormDetail = ({firstName, lastName}) => {
     
     return ([{
-        fieldLabel:"Firstname",
-        fieldName:"firstName", 
-        fieldType:"text", 
-        fieldValue:firstName
+        label:"Firstname",
+        name:"firstName", 
+        type:"text", 
+        value:firstName
     }, {
-        fieldLabel:"Lastname",
-        fieldName:"lastName", 
-        fieldType:"text", 
-        fieldValue:lastName
+        label:"Lastname",
+        name:"lastName", 
+        type:"text", 
+        value:lastName
     }]
     );
 }
