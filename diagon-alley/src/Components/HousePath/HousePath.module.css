@@ -1,0 +1,39 @@
+.house_path {
+    margin-top: 4rem;
+    background-color: rgba(0,0,0,.7);
+    padding: 1rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 10rem;
+    height:100%;
+    position: absolute;
+    z-index: 5
+}
+
+.housepath_heading {
+    color: var(--st-secondary-disabled);
+}
+
+.house_links {
+    z-index: 10;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.house_avatar:hover {
+    opacity: 0.7
+}
+
+@media only screen and (max-width: 784px) {
+    .house_path {
+        margin-top: 7rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .house_path {
+        margin-top: 10.5rem;
+    }
+}
