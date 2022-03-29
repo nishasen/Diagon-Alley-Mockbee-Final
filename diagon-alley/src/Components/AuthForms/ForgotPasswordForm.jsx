@@ -7,8 +7,8 @@ const ForgotPasswordForm = () => {
     <div className="main centered">
         <form className="auth-card" onSubmit={(e)=>SubmitHandler(e)}>
             <h2 className="text-header align-header">Change your password</h2>
-            <Textfields fieldLabel={"New Password"} fieldName={"password"} fieldType={"password"} fieldValue={""}/>
-            <Textfields fieldLabel={"Confirm Password"} fieldName={"confirm-password"} fieldType={"password"} fieldValue={""}/>
+            <Textfields label={"New Password"} name={"password"} type={"password"} value={""}/>
+            <Textfields label={"Confirm Password"} name={"confirm-password"} type={"password"} value={""}/>
             <div className="text-span centered"><b>Error</b></div>
             <div className="centered">
                 <Button buttonText={"Reset password"} size={"large"} buttonBorder={true} type="submit"/>

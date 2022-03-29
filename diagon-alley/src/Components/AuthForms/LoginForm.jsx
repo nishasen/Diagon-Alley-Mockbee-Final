@@ -95,17 +95,17 @@ const LoginForm = () => {
     <div className="main centered">
         <form className="auth-card" onSubmit={(e)=>submitHandler(e)}>
             <h2 className="text-header align-header">Login</h2>
-            <Textfields fieldLabel={"Email"} 
-                        fieldName={"email"} 
-                        fieldType={"email"} 
-                        fieldValue={form.email} 
+            <Textfields label={"Email"} 
+                        name={"email"} 
+                        type={"email"} 
+                        value={form.email} 
                         onChange={(e)=>handleChange(e)}
                         required/>
             <div className="password-fields">
-              <Textfields fieldLabel={"Password"} 
-                          fieldName="password" 
-                          fieldType={showPassword ? "text" : "password"} 
-                          fieldValue={form.password} 
+              <Textfields label={"Password"} 
+                          name="password" 
+                          type={showPassword ? "text" : "password"} 
+                          value={form.password} 
                           onChange={(e)=>handleChange(e)} required/> 
               {showPassword ? 
                 <HiEye className="eye-icon" onClick={()=>setShowPassword(!showPassword)}/> : 
@@ -113,12 +113,12 @@ const LoginForm = () => {
             </div> 
             <div className="card-pane dis-flex">
                 <CheckboxRadio 
-                fieldLabel={"Remember me"} 
-                fieldForLabel={"rememberMe"} 
-                fieldName={"REMEMBER_ME"} 
-                fieldType={"checkbox"} 
-                fieldValue={"rememberMe"} 
-                fieldLabelClassName={"text-black"} />
+                label={"Remember me"} 
+                forLabel={"rememberMe"} 
+                name={"REMEMBER_ME"} 
+                type={"checkbox"} 
+                value={"rememberMe"} 
+                labelClassName={"text-black"} />
                 <Link to="/forgot-password" className="btn-link text-primary hover-primary forgot-password">Forgot your password?</Link>
             </div>
             {error.email.isError && <div className="error-message centered"><b>{error.email.errorMessage}</b></div>}

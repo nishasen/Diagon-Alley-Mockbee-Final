@@ -1,17 +1,17 @@
 import React from 'react';
 import './CheckboxRadio.css';
 const CheckboxRadio = (props) => {
-  const {fieldLabel, fieldName, fieldValue, fieldType, fieldLabelClassName, fieldForLabel} = props;
-  const Label = fieldLabelClassName.concat(" input-label")
+  const {label, name, value, type, labelClassName, forLabel} = props;
+  const Label = labelClassName.concat(" input-label")
   return (
     <div className="dis-flex box-space">
         <input 
-          type={fieldType} 
-          name={fieldName} 
-          value={fieldValue} 
-          id={fieldForLabel} 
+          type={type} 
+          name={name} 
+          value={value} 
+          id={forLabel} 
           className="checkbox-radio" {...props}/>
-        <label htmlFor={fieldForLabel} className={Label}>{fieldLabel}</label>
+        <label htmlFor={forLabel} className={Label}>{label}</label>
     </div>
   )
 }

@@ -109,21 +109,21 @@ const SignUpForm = () => {
             <h2 className="text-header align-header">Sign Up</h2>
             <div className="dis-flex form-fields">
               <div className="dis-flex name-fields">
-                {SignupFormData.map(({fieldLabel, fieldName, fieldType, fieldValue})=>
-                  <Textfields fieldLabel={fieldLabel}
-                              fieldName={fieldName}
-                              fieldType={fieldType}
-                              fieldValue={fieldValue}
+                {SignupFormData.map(({label, name, type, value})=>
+                  <Textfields label={label}
+                              name={name}
+                              type={type}
+                              value={value}
                               onChange={(e)=>handleChange(e)} required/>)}
               </div>              
-              <Textfields fieldLabel={"Email"} fieldName={"email"} fieldType={"email"} fieldValue={form.email} onChange={(e)=>handleChange(e)} required/>             
+              <Textfields label={"Email"} name={"email"} type={"email"} value={form.email} onChange={(e)=>handleChange(e)} required/>             
               <div className="password-fields">
-                <Textfields fieldLabel={"Password"} fieldName="password" fieldType={showPassword ? "text" : "password"} fieldValue={form.password} onChange={(e)=>handleChange(e)} required/> 
+                <Textfields label={"Password"} name="password" type={showPassword ? "text" : "password"} value={form.password} onChange={(e)=>handleChange(e)} required/> 
                 {showPassword ? 
                     <HiEye className="eye-icon" onClick={()=>setShowPassword(!showPassword)}/> : <RiEyeCloseFill className="eye-icon" onClick={()=>setShowPassword(!showPassword)}/>}
               </div>   
               <div className="password-fields">
-                <Textfields fieldLabel={"Confirm Password"} fieldName="confirmPassword" fieldType={showConfirmPassword ? "text" : "password"} fieldValue={form.confirmPassword} onChange={(e)=>handleChange(e)} required/> 
+                <Textfields label={"Confirm Password"} name="confirmPassword" type={showConfirmPassword ? "text" : "password"} value={form.confirmPassword} onChange={(e)=>handleChange(e)} required/> 
                 {showConfirmPassword ? 
                     <HiEye className="eye-icon" onClick={()=>setShowConfirmPassword(!showConfirmPassword)}/> : <RiEyeCloseFill className="eye-icon" onClick={()=>setShowConfirmPassword(!showConfirmPassword)}/>}
               </div>            
