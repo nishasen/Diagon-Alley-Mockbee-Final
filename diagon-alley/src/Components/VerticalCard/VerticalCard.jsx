@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import style from './VerticalCard.module.css';
 import { Link } from 'react-router-dom';
-import { useCart, useData, useWishlist } from '../../Context';
+import { useNavigate } from 'react-router';
+import { useAuth, useCart, useData, useWishlist } from '../../Context';
 import { AddToWishlist, RemoveFromWishlist, AddToCart, RemoveFromCart } from '../../APICall';
 import { IoHeart, IoHeartOutline } from 'react-icons/io5';
 import { Icon, Button, Toast } from '..';
@@ -17,6 +18,8 @@ const VerticalCard = ({ Product }) => {
     productActualPrice,
   }  = Product;
   
+  let navigate = useNavigate();
+  let { userLogin } = useAuth();
   const { setShowProduct, dispatch } = useData();  
   const { wishlistState, wishlistDispatch } = useWishlist();
   const { wishlistItems } = wishlistState;
@@ -25,6 +28,42 @@ const VerticalCard = ({ Product }) => {
   const productDiscount = (((productActualPrice - productPrice)/productActualPrice)*100).toFixed(1);
   const showNew = productAddedInMonths===1 ? true : false;
   const ratingColor = productRating < 4 ? productRating <3 ? "blueviolet" : "blue" : "green";
+
+  const addItemToWishlistHandler = () => {
+    if(userLogin) {
+      AddToWishlist(Product, wishlistDispatch)
+      Toast(`Added ${productName} to wishlist`, "success")
+    } else {
+      navigate('../login', { replace: true })
+    }
+  }
+  const addItemToCartHandler = () => {
+    if(userLogin) {
+      AddToCart(Product, cartDispatch)
+      Toast(`Added ${productName} to cart`, "success")
+    } else {
+      navigate('../login', { replace: true })
+    }
+  }
+
+  const removeItemFromWishlist = () => {
+    if(userLogin) {
+      RemoveFromWishlist(_id, wishlistDispatch);
+      Toast(`Removed ${productName} from wishlist`, "warning");
+    } else {
+      Toast(`Cannot remove item, you are not logged in`, "error");
+    }
+  }
+
+  const removeItemFromCart = () => {
+    if(userLogin) {
+      RemoveFromCart(_id, cartDispatch);
+      Toast(`Removed ${productName} from cart`, "warning");
+    } else {
+      Toast(`Cannot remove item, you are not logged in`, "error");
+    }
+  }
+
   return (
     <>  
       <div className={`${style.product_card} dis-grid`} key={_id}> 
@@ -38,14 +77,10 @@ const VerticalCard = ({ Product }) => {
         </div> 
         <div className={style.card_top_icon}> 
         {wishlistItems.find(item=>item._id===Product._id) ? 
-          <Icon showBadge={false} onClick={()=>{
-            Toast(`Removed ${productName} from wishlist`, "warning")
-            RemoveFromWishlist(_id, wishlistDispatch)}}>
+          <Icon showBadge={false} onClick={removeItemFromWishlist}>
               <IoHeart />
           </Icon> :
-          <Icon showBadge={false} onClick={()=>{
-            Toast(`Added ${productName} to wishlist`, "success")
-            AddToWishlist(Product, wishlistDispatch)}}>
+          <Icon showBadge={false} onClick={addItemToWishlistHandler}>
               <IoHeartOutline />
           </Icon>}
         </div>
@@ -70,16 +105,12 @@ const VerticalCard = ({ Product }) => {
             size={"large"} 
             buttonBorder={true} 
             className={style.changed_button_primary}
-            onClick={()=>{
-              Toast(`Removed ${productName} from cart`, "warning")
-              RemoveFromCart(_id, cartDispatch)}}/> : 
+            onClick={removeItemFromCart}/> : 
           <Button 
             buttonText={"Add to cart"} 
             size={"large"} 
             buttonBorder={true}
-            onClick={()=>{
-              Toast(`Added ${productName} to cart`, "success")
-              AddToCart(Product, cartDispatch)}} />}
+            onClick={addItemToCartHandler} />}
       </div>
     </>
   )
