@@ -1,0 +1,12 @@
+.cart-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 4rem;
+}
+
+.cart-text {
+    margin-top: 3rem;
+    text-align: center;
+}

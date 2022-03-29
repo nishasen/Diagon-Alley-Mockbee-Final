@@ -1,0 +1,56 @@
+.product_card {
+    background-color: hsla(0, 0%, 98%, 0.7);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 22rem;
+    height: 14rem;
+}
+
+.image_pane {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.product_image {
+    background-color: hsla(0, 0%, 98%, 0.7);
+    border-radius: 0.5rem 0 0 0.5rem;
+    width: 10rem;
+    height: 100%;
+}
+
+.card_content {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+.price {
+    justify-content: space-between;
+}
+
+.discount {
+    background-color: var(--st-red);
+    color: var(--st-white);
+    padding: 0 0.1rem;
+    border-radius: 0.4rem;
+}
+
+.btn_counter {
+    display: flex;
+    justify-content: center;
+}
+
+.disabled_btn {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    color: white;
+}

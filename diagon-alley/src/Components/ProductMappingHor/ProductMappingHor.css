@@ -1,0 +1,17 @@
+.product-align-hor {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.loader {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+} 
+
+.cart-text {
+    margin-top: 3rem;
+    text-align: center;
+}
