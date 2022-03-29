@@ -1,0 +1,28 @@
+.wish-cart-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem auto;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.header-span {
+    background-color: hsla(0, 0%, 98%, 0.8);
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+}
+
+
+@media only screen and (max-width: 784px) {
+    .wish-cart-header {
+        margin-top: 8rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .wish-cart-header {
+        margin-top: 11.5rem;
+    }
+}
+
+

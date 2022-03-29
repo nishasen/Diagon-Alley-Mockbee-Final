@@ -1,0 +1,50 @@
+.product_card {
+    background-color: hsla(0, 0%, 98%, 0.7);
+    grid-template-columns: 12rem;
+    grid-template-rows: repeat(4, auto);
+    max-width: 12rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.product_image {
+    margin: 0  auto;
+    width: 12rem;
+    height: 15rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card_top_icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.card_top_icon, .image_container {
+    grid-area: 1/1/2/2;
+}
+
+.card_product_detail {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.desc_pane, .price_pane {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    padding: 0 0.2rem;
+    border-radius: 0.4rem;
+    color: white
+}
+
+.discount {
+    background-color: var(--st-red);
+    color: var(--st-white);
+    padding: 0 0.1rem;
+    border-radius: 0.4rem;
+}
