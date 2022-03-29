@@ -9,7 +9,6 @@ const Wishlist = () => {
   const { wishlistState } = useWishlist();
   const { wishlistItems } = wishlistState;
   checkUserLogin();
-  console.log(userLogin)
   return (
     <>
       <HomeWallpaper />  
