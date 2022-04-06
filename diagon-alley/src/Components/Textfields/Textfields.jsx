@@ -5,7 +5,7 @@ const Textfields = (props) => {
   const {label, name, type, value} = props;
   return (
     <div className="basic-textfield-outlined textfield-label ">
-        <label htmlFor={name} className="input-label">{label}</label>
+        <label htmlFor={name} className="text-label">{label}</label>
         <input 
           type={type} 
           name={name} 
