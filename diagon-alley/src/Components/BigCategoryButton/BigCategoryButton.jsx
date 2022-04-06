@@ -14,7 +14,7 @@ const BigCategoryButton = () => {
       <h2 className={`houses-title ${houseTitle}`}>Shop by category</h2>
       <div className="category-button">
         {CategoryDetails.map(({categoryImage, text, linkPath})=>
-        <button className="button-style" onClick={()=>{
+        <button className="button-style" key={text} onClick={()=>{
             dispatch({type: "HOME_CATEGORY", payload: text}) 
             setCategoryFilter(false)
             setHouseFilter(true)}}>

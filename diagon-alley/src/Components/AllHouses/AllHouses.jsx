@@ -14,7 +14,7 @@ const AllHouses = (props) => {
     <div className="all-houses" {...props}>
       <h2 className={`houses-title ${houseTitle}`}>Shop by houses</h2>
       <div className="all-housespane">
-          {HouseDetails.map(({HouseImage, text, linkPath})=><House image={HouseImage} text={text} linkPath={linkPath}/>)}
+          {HouseDetails.map(({HouseImage, text, linkPath})=><House image={HouseImage} text={text} linkPath={linkPath} key={text}/>)}
       </div>
     </div>
   )
