@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const RemoveFromCart = async(productId, cartDispatch) => {
-    console.log(productId, localStorage.getItem("userToken"))
     try{ 
         const config = {
             headers: {
