@@ -38,36 +38,36 @@ const FilterNav = () => {
         
         <h4 className={style.filter_heading}>Filter out</h4>
         {FilterOut.map(({
-            fieldLabel, 
-            fieldForLabel,
-            fieldName, 
-            fieldType, 
-            fieldValue,
-            fieldFilter,
-            fieldLabelClassName}) => <CheckboxRadio fieldLabel={fieldLabel}
-                                                    fieldForLabel={fieldForLabel}
-                                                    fieldName={fieldName}
-                                                    fieldType={fieldType}
-                                                    fieldValue={fieldValue}
-                                                    fieldLabelClassName={fieldLabelClassName}
-                                                    checked={fieldFilter}
-                                                    onChange={(e)=>dispatch({type: fieldName, payload: e.target.checked})}/>)}
+            label, 
+            forLabel,
+            name, 
+            type, 
+            value,
+            filter,
+            labelClassName}) => <CheckboxRadio label={label}
+                                                    forLabel={forLabel}
+                                                    name={name}
+                                                    type={type}
+                                                    value={value}
+                                                    labelClassName={labelClassName}
+                                                    checked={filter}
+                                                    onChange={(e)=>dispatch({type: name, payload: e.target.checked})}/>)}
         <h4 className={style.filter_heading}>Sort by</h4>
         {SortByPrice.map(({
-            fieldLabel, 
-            fieldForLabel,
-            fieldName, 
-            fieldType, 
-            fieldValue,
-            fieldFilter,
-            fieldLabelClassName}) => <CheckboxRadio fieldLabel={fieldLabel} 
-                                                    fieldForLabel={fieldForLabel} 
-                                                    fieldName={fieldName} 
-                                                    fieldType={fieldType} 
-                                                    fieldValue={fieldValue} 
-                                                    fieldLabelClassName={fieldLabelClassName}
-                                                    checked={fieldFilter === fieldValue}
-                                                    onChange={()=>dispatch({type: fieldName, payload: fieldValue})}/>)}
+            label, 
+            forLabel,
+            name, 
+            type, 
+            value,
+            filter,
+            labelClassName}) => <CheckboxRadio label={label} 
+                                                    forLabel={forLabel} 
+                                                    name={name} 
+                                                    type={type} 
+                                                    value={value} 
+                                                    labelClassName={labelClassName}
+                                                    checked={filter === value}
+                                                    onChange={()=>dispatch({type: name, payload: value})}/>)}
 
         {houseFilter && <h4 className={style.filter_heading}>Show house</h4>}
         {houseFilter &&  <div className={`dis-grid ${style.house_links}`}>
