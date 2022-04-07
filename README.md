@@ -31,6 +31,12 @@
   ## Project link
  - [Diagon Alley](https://diagonalley.vercel.app/)
  
+ ## How to install and run locally ?
+$ git clone https://github.com/nishasen/Diagon-Alley-Mockbee-Final.git
+$ cd diagon-alley
+$ npm install
+$ npm start
+ 
  ## Screenshots
  These are some screenshots of my project. the whole app is made responsive.
  
