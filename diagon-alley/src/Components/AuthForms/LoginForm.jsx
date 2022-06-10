@@ -46,7 +46,7 @@ const LoginForm = () => {
   }
 
   const setGuestLogin = () => {
-    setForm({email: "guest@gmail.com", password: "Guest123"})
+    setForm({email: "nishasen@gmail.com", password: "Nisha@123"})
   }
 
   const submitHandler = async(event) => {
