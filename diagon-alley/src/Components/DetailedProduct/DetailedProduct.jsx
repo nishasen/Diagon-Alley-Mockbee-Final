@@ -15,7 +15,7 @@ const DetailedProduct = ({getProduct}) => {
   const addItemToWishlistHandler = () => {
     if(userLogin) {
       AddToWishlist(getProduct, wishlistDispatch)
-      Toast(`Added ${productName} to wishlist`, "success")
+      Toast(`Added ${getProduct?.productName} to wishlist`, "success")
     } else {
       navigate('../login', { replace: true })
     }
@@ -23,7 +23,7 @@ const DetailedProduct = ({getProduct}) => {
   const addItemToCartHandler = () => {
     if(userLogin) {
       AddToCart(getProduct, cartDispatch)
-      Toast(`Added ${productName} to cart`, "success")
+      Toast(`Added ${getProduct?.productName} to cart`, "success")
     } else {
       navigate('../login', { replace: true })
     }
