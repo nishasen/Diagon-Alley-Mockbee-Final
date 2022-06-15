@@ -6,3 +6,4 @@ export { FilterHouseLinks, FilterCategoryLinks } from './FilterLinksDetail';
 export { SignupFormDetail } from './SignupFormDetail';
 export { TotalCartQuantity } from './TotalCartQuantity';
 export { CalculateTotal } from './CalculateTotal';
+export { DefaultAddresses } from './DefaultAddresses';

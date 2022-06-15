@@ -12,7 +12,7 @@ const Address = () => {
         <TopNav showHamburger={true}/>
         <Themes />
         {state.showSideNav && <HousePath />}
-        <WishCartHeader text={"My Addresses"} items={productState.addresses.length}/>
+        <WishCartHeader text={"My Addresses"} items={productState?.addresses?.length}/>
         <div className="dis-flex address">
             <AddressContainer />
             <AllAddresses />

@@ -9,7 +9,7 @@ const AddressBox = ({Checkout}) => {
     const navigate = useNavigate();
   return (
     <>
-      {state?.addresses.map(address => 
+      {state?.addresses?.map(address => 
       <div className={`address-box ${address.setAsDefault && "set-border"}`}>
         <div className="address-tag">{address.addressType}</div>
         <h4 className="address-name">{address.name}</h4>

@@ -1,3 +1,5 @@
+import { DefaultAddresses } from "../../GeneralFunctions";
+
 const Reducer = (state, action) => {
     const defaultFilter = {
         house: "",
@@ -7,6 +9,7 @@ const Reducer = (state, action) => {
         onlyInStock: false,
         fastDelivery: false,
         ratingAbove4: false,
+        addresses: [...DefaultAddresses],
         range: 3000,
         houseState: [],
         categoryState: [],

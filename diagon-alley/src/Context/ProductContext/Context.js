@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import { Reducer } from './Reducer';
 import { GetAllProduct } from '../../APICall';
-import { DefaultAddresses } from "./DefaultAddresses";
+import { DefaultAddresses } from "../../GeneralFunctions";
 import { Compose, 
         setHouse,
         setCategory,
