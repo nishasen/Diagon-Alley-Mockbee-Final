@@ -9,9 +9,7 @@ const Checkout = () => {
   const { cartTotal} = useAuth();
   const navigate = useNavigate();
   const { totalQuantity } = cartTotal;
-  useEffect(() => {
-    totalQuantity === 0 && navigate('/product-listing/all-products', {replace: true});
-  }, [totalQuantity])
+  totalQuantity === 0 && navigate('/product-listing/all-products', {replace: true});
   return (
     <>
       <HomeWallpaper />  
