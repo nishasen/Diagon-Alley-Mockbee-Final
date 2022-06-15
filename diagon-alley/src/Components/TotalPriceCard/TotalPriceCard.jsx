@@ -8,7 +8,7 @@ import './TotalPriceCard.css';
 const TotalPriceCard = ({Checkout}) => {
     const navigate = useNavigate();
     const { cartTotal, setCartTotal } = useAuth();
-    const { cartState } = useCart();
+    const { cartState, cartDispatch } = useCart();
     const { cartItems } = cartState;
     const { totalQuantity, deliveryCharge } = cartTotal;
     const {price, actualPrice, discountPrice} = CalculateTotal(cartItems, cartTotal, setCartTotal);     
