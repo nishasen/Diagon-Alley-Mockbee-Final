@@ -11,7 +11,7 @@ function HeroImage() {
     <div className="hero-image-container centered">
       <img src={DiagonAlley} alt="shop by house" className="hero-image"/>
       <h2 className="text-white hero-text">Your one stop store for your favourite Harry Potter theme based clothes.</h2>
-      <Link to="/product-listing" className="btn-link">
+      <Link to="/product-listing/all-products" className="btn-link">
         <Button buttonText={"Shop now"} size={"large"} buttonBorder={true} onClick={()=>{
           setCategoryFilter(true)
           setHouseFilter(true)

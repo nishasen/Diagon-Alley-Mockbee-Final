@@ -3,7 +3,7 @@ import { Button, Icon, Toast } from '..';
 import { IoHeart } from 'react-icons/io5';
 import style from './WishlistCard.module.css';
 import { AddToCart, IncrDecrQuantity, RemoveFromWishlist } from '../../APICall';
-import { useAuth, useCart, useWishlist } from '../../Context';
+import { useCart, useWishlist } from '../../Context';
 
 const WishlistCard = ({ Product }) => {
   const {

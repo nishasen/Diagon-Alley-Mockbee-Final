@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DetailedProduct, HomeWallpaper, Themes, TopNav } from '../../Components';
 import { HousePath } from '../../Components/HousePath/HousePath';
-import { useGeneral } from '../../Context';
+import { useData, useGeneral } from '../../Context';
+import { useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
   const { state } = useGeneral();
+  const { Products } = useData();
+  const { id } = useParams();
+  const getProduct = Products?.find(item => item?.id===id)
   return (
     <>
        <HomeWallpaper /> 
        <TopNav showHamburger={true}/>
        <Themes /> 
        {state.showSideNav && <HousePath />}
-       <DetailedProduct /> 
+       <DetailedProduct getProduct={getProduct}/> 
     </>
   )
 }

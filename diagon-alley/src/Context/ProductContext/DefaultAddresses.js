@@ -1,0 +1,36 @@
+import { v4 as uuid } from 'uuid';
+
+export const DefaultAddresses = [{
+    _id: uuid(),
+    name: 'Nisha Sen',
+    phoneNo: "9876543210",
+    pincode: "123456",
+    address: "Hno.-25, Park township",
+    street: "New Street",
+    city: "Bangalore",
+    state: "Karnataka",
+    addressType: "home", 
+    setAsDefault: true,
+}, {
+    _id: uuid(),
+    name: 'Ritika Sen',
+    phoneNo: "9876444211",
+    pincode: "123487",
+    address: "Hno.-34, Flower township",
+    street: "",
+    city: "Pune",
+    state: "Maharashtra",
+    addressType: "other",
+    setAsDefault: false,
+}, {
+    _id: uuid(),
+    name: 'N Sen',
+    phoneNo: "9876645213",
+    pincode: "983456",
+    address: "Hno.-25, Garden City",
+    street: "Nr. Airport",
+    city: "Hyderabad",
+    state: "Andhra Pradesh",
+    addressType: "work",
+    setAsDefault: false,
+}]

@@ -1,20 +1,33 @@
 import React from 'react';
 import { Button, CheckboxRadio } from '..';
-import { Link } from 'react-router-dom';
 import style from './FilterNav.module.css';
 import { useData } from '../../Context';
 import { FilterOutDetail, SortByDetail, FilterHouseLinks, FilterCategoryLinks } from '../../GeneralFunctions';
+import { useParams } from 'react-router';
 
 const FilterNav = () => {
   const {state, dispatch, houseFilter, categoryFilter} = useData();  
   const {sortBy, onlyInStock, fastDelivery, ratingAbove4, range, newProduct, houseState, categoryState} = state;
   const FilterOut = FilterOutDetail(onlyInStock, fastDelivery, ratingAbove4, newProduct);
   const SortByPrice = SortByDetail(sortBy);
+  const { pathname } = useParams();
   return (
     <div className={style.filter_nav}>
         <div className={style.filter_nav_top}>
             <h3 className="text-white">Filters</h3>
-            <Button buttonText={"Clear"} color={"primary"} onClick={()=>dispatch({type: "CLEAR_FILTERS"})}/>
+            <Button buttonText={"Clear"} color={"primary"} onClick={()=>{
+                dispatch({type: "CLEAR_FILTERS"})
+                if(pathname==="gryffindor" || 
+                pathname==="hufflepuff" || 
+                pathname==="ravenclaw" || 
+                pathname==="slytherin") {
+                    dispatch({type: "HOME_HOUSE", payload: pathname[0].toUpperCase()+pathname.slice(1)});
+                    setCategoryFilter(true);
+                }
+                else {
+                    dispatch({type: "HOME_CATEGORY", payload: pathname[0].toUpperCase()+pathname.slice(1)});
+                    setHouseFilter(true);
+                }}}/>
         </div>
         <h4 className={`dis-inline ${style.filter_heading}`}>Price : ₹{range}</h4>
         <div className="slider-container">
@@ -72,7 +85,7 @@ const FilterNav = () => {
         {houseFilter && <h4 className={style.filter_heading}>Show house</h4>}
         {houseFilter &&  <div className={`dis-grid ${style.house_links}`}>
             {FilterHouseLinks.map(({ labelName, image })=>
-            <label HTMLFor={labelName} className={style.check_link}>
+            <label htmlFor={labelName} className={style.check_link}>
                 <input 
                     type="checkbox" 
                     id={labelName} 
@@ -80,7 +93,7 @@ const FilterNav = () => {
                     value={labelName} 
                     className={style.checkbox_size}
                     checked={houseState.includes(labelName)}
-                    onClick={(e)=>dispatch({type: "HOUSE_FILTER", payload: labelName})}/>
+                    onChange={(e)=>dispatch({type: "HOUSE_FILTER", payload: labelName})}/>
                     <div className={`avatar avatar-xs-size ${style.house_avatar}`}>
                         <img src={image} className="img-responsive img-round" alt="avatar"/>
                     </div>
@@ -91,7 +104,7 @@ const FilterNav = () => {
         {categoryFilter && <h4 className={style.filter_heading}>Show category</h4>}
         {categoryFilter && <div className={`dis-grid ${style.house_links}`}>
             {FilterCategoryLinks.map(({ labelName, text, avatarColor })=>
-            <label HTMLFor={labelName} className={style.check_link}>
+            <label htmlFor={labelName} className={style.check_link}>
                 <input 
                     type="checkbox" 
                     id={labelName} 
@@ -99,7 +112,7 @@ const FilterNav = () => {
                     value={labelName} 
                     className={style.checkbox_size}
                     checked={categoryState.includes(labelName)}
-                    onClick={(e)=>dispatch({type: "CATEGORY_FILTER", payload: labelName})}/>
+                    onChange={(e)=>dispatch({type: "CATEGORY_FILTER", payload: labelName})}/>
                     <div className={`avatar avatar-xs-size avatar-text ${avatarColor} ${style.house_avatar}`}>
                         {text}
                     </div>

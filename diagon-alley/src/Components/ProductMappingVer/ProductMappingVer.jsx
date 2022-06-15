@@ -16,7 +16,7 @@ const ProductMappingVer = ({showWishlist}) => {
                             <h1 className="wishlist-text">Your wishlist is empty</h1> : 
                             wishlistItems.map(Product => <WishlistCard Product={Product}/>) : 
           loading ? <ImSpinner className="loader" /> : 
-                    Products.map(Product=> <VerticalCard key={Product._id} Product={Product} />)
+                    Products.map(Product=> <VerticalCard key={Product.id} Product={Product} />)
           }
     </div>
   )

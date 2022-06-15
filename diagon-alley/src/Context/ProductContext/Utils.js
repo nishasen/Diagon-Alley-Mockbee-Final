@@ -35,6 +35,9 @@ const setHouseState = (state, data) => state.houseState.length===0 ?
   const setCategoryState = (state, data) => state.categoryState.length===0 ? 
   data : data.filter(product=>state.categoryState.includes(product.categoryName));
 
+const setSearchProduct = (state, data) => state.searchProducts ? 
+  data.filter(product=>product.productName.toLowerCase().includes(state.searchProducts.toLowerCase())) : data;
+
 export { Compose, 
     setHouse, 
     setCategory,
@@ -45,5 +48,6 @@ export { Compose,
     showNewProduct,
     setRange,
     setHouseState,
-    setCategoryState };
+    setCategoryState,
+    setSearchProduct };
 

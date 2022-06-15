@@ -9,6 +9,7 @@ import { Icon, Button, Toast } from '..';
 
 const VerticalCard = ({ Product }) => {
   const {
+    id,
     _id,
     productImg, 
     productAddedInMonths,
@@ -20,7 +21,7 @@ const VerticalCard = ({ Product }) => {
   
   let navigate = useNavigate();
   let { userLogin } = useAuth();
-  const { setShowProduct, dispatch } = useData();  
+  const { dispatch } = useData();  
   const { wishlistState, wishlistDispatch } = useWishlist();
   const { wishlistItems } = wishlistState;
   const { cartState, cartDispatch } = useCart();
@@ -69,10 +70,8 @@ const VerticalCard = ({ Product }) => {
       <div className={`${style.product_card} dis-grid`} key={_id}> 
         <div className={`badge-wrapper ${style.image_container}`}>
             {showNew && <span className="badge-text badge-box-square fire-bgcolor badge-over-image"><b>New</b></span>}
-            <Link to="product-detail" className="btn-link text-black">
-              <img src={productImg} className={style.product_image} alt="product" onClick={()=>{
-                                                                        setShowProduct(Product)
-                                                                        dispatch({type: "CLEAR_FILTERS"})}}/>
+            <Link to={`/product-details/${id}`} className="btn-link text-black">
+              <img src={productImg} className={style.product_image} alt="product" onClick={()=>dispatch({type: "CLEAR_FILTERS"})}/>
             </Link>  
         </div> 
         <div className={style.card_top_icon}> 
@@ -84,10 +83,8 @@ const VerticalCard = ({ Product }) => {
               <IoHeartOutline />
           </Icon>}
         </div>
-        <Link to="product-detail" className="btn-link text-black">
-          <div className={style.card_product_detail} onClick={()=>{
-                                                      setShowProduct(Product)
-                                                      dispatch({type: "CLEAR_FILTERS"})}}>
+        <Link to={`/product-details/${id}`} className="btn-link text-black">
+          <div className={style.card_product_detail} onClick={()=>dispatch({type: "CLEAR_FILTERS"})}>
             <div className={style.desc_pane}>
               <h4 className="wrap-inline">{productName}</h4>
               <span className={style.rating} style={{backgroundColor: ratingColor}}>{productRating}⭐</span>

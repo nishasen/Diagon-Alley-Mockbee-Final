@@ -1,21 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useData } from '../../Context';
+import { useNavigate } from 'react-router-dom';
 import './House.css';
 
 const House = ({image, text, linkPath}) => {
-  const { dispatch, setHouseFilter, setCategoryFilter } = useData();
+  const navigate = useNavigate();
   return (
     <div className="housepane">
       <img src={image} alt="House" className="house" />
-      <Link to={`${linkPath}/${text.toLowerCase()}`}>
-        <button className="house-button" onClick={()=>{
-          dispatch({type: "HOME_HOUSE", payload: text}) 
-          setHouseFilter(false)
-          setCategoryFilter(true)}}>
-          {text}
-        </button>
-      </Link>
+      <button className="house-button" onClick={()=>navigate(`${linkPath}/${text.toLowerCase()}`, { replace: true })}>
+        {text}
+      </button>
     </div>
   )
 }

@@ -13,7 +13,7 @@ import './Cart.css';
 
 const Cart = () => {
   const { state } = useGeneral();
-  const { cartTotal, setCartTotal, checkUserLogin, userLogin } = useAuth();
+  const { cartTotal, setCartTotal, userLogin } = useAuth();
   const { totalQuantity } = cartTotal;
   const { cartState } = useCart();
   const { cartItems } = cartState;

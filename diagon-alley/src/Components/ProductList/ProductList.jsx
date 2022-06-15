@@ -1,6 +1,5 @@
 import React from 'react';
 import { ProductMappingVer, ProductsInPage } from '..';
-import { useData } from '../../Context';
 import style from './ProductList.module.css';
 
 const ProductList = () => {                     

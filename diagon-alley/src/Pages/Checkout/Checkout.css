@@ -1,0 +1,30 @@
+.checkout {
+    grid-template-columns: auto auto;
+    margin: 0 4rem;
+    gap: 1rem 1rem;
+    padding-bottom: 1rem
+}
+
+.checkout-price {
+    justify-content: center;
+}
+
+.checkout-box {
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout-address {
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .checkout {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+    }
+
+}

@@ -6,3 +6,5 @@ export { Cart } from './Cart/Cart';
 export { Wishlist } from './Wishlist/Wishlist';
 export { ProductListing } from './ProductListing/ProductListing';
 export { ProductDetail } from './ProductDetail/ProductDetail';
+export { Address } from './Address/Address';
+export { Checkout } from './Checkout/Checkout';

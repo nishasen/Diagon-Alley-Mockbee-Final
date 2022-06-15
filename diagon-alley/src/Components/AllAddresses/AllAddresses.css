@@ -1,0 +1,78 @@
+.all-addresses {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    margin: 0 4rem;
+    padding-bottom: 1rem;
+}
+
+.add-address {
+    padding: 4rem;
+    border: 2px dotted black;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: hsla(0, 0%, 98%, 0.7);
+    backdrop-filter: blur(8px);
+
+}
+
+.address-box {
+    display: grid;
+    padding: 0.5rem;
+    gap: 0.2rem;
+    background-color: hsla(0, 0%, 98%, 0.7);
+    backdrop-filter: blur(8px);
+    width: 15rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.address-button {
+    display: flex;
+    bottom: 0;
+    gap: 0.5rem;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.set-border {
+    border: 3px solid black;
+}
+
+.default-set {
+    font-weight: bold;
+    color: var(--st-primary-color);
+    cursor: pointer;
+}
+
+.default-set:hover {
+    color: var(--st-primary-hover);
+}
+
+.address-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.2rem 0.5rem;
+    background-color: hsla(0, 0%, 98%, 0.7);
+    font-weight: bold;
+}
+
+.address-name {
+    width: 10rem;
+}
+
+.address-body {
+    width: 100%;
+}
+
+.address-body span {
+    font-weight: bold;
+}
+
+.address-name, .address-body {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

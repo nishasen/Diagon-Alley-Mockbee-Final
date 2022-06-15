@@ -1,6 +1,7 @@
 .checkbox-radio {
     height: 1rem;
     width: 1rem;
+    cursor: pointer;
 }
 
 .box-space {
@@ -11,4 +12,5 @@
 .input-label {
     font-weight: bold;
     font-size: 1rem;
+    cursor: pointer;
 }

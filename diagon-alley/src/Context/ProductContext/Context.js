@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import { Reducer } from './Reducer';
 import { GetAllProduct } from '../../APICall';
+import { DefaultAddresses } from "./DefaultAddresses";
 import { Compose, 
         setHouse,
         setCategory,
@@ -11,12 +12,14 @@ import { Compose,
         check4AboveRating,
         setRange,
         setHouseState,
-        setCategoryState } from "./Utils";
+        setCategoryState,
+        setSearchProduct } from "./Utils";
 
 const DataContext = createContext({});
 const useData = () => useContext(DataContext);
 const DataProvider = ({children}) => {
     const [data, setData] = useState([])
+    const [form, setForm] = useState({});
     const { response } = GetAllProduct(); 
     useEffect(() => {
         setData(response.products || [])
@@ -26,6 +29,8 @@ const DataProvider = ({children}) => {
         house: "",
         category: "",
         sortBy: "",
+        addresses: [...DefaultAddresses],
+        searchProducts: "",
         newProduct: false,
         onlyInStock: false,
         fastDelivery: false,
@@ -46,18 +51,20 @@ const DataProvider = ({children}) => {
         check4AboveRating,
         setRange,
         setHouseState,
-        setCategoryState
+        setCategoryState, 
+        setSearchProduct
     )(data);
-   
+    
     const [showProduct, setShowProduct] = useState({})
-    const [houseFilter, setHouseFilter] = useState(true);
-    const [categoryFilter, setCategoryFilter] = useState(true);
+    const [houseFilter, setHouseFilter] = useState(false);
+    const [categoryFilter, setCategoryFilter] = useState(false);
     return(
         <DataContext.Provider value={{ state, 
                                        Products: filteredData, 
                                         dispatch, 
                                         showProduct, 
                                         setShowProduct,
+                                        form, setForm,
                                         houseFilter,
                                         setHouseFilter,
                                         categoryFilter,

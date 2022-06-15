@@ -30,3 +30,6 @@ export { HeroImage } from './HeroImage/HeroImage';
 export { Footer } from './Footer/Footer';
 export { HousePath } from './HousePath/HousePath';
 export { Toast } from './Toast/Toast';
+export { AddressContainer } from './AddressContainer/AddressContainer';
+export { AllAddresses } from './AllAddresses/AllAddresses';
+export { AddressBox } from './AddressBox/AddressBox';

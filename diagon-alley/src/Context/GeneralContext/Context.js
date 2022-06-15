@@ -6,7 +6,8 @@ const useGeneral = () => useContext(GeneralContext);
 const GeneralProvider = ({children}) => {
     const [state, dispatch] = useReducer(Reducer, {
         showDropdown: false,
-        showSideNav: false
+        showSideNav: false,
+        showAddressBox: false
     })
     return (
         <GeneralContext.Provider value={{state, dispatch}}>

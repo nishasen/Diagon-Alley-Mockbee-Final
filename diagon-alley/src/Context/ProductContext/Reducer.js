@@ -26,6 +26,21 @@ const Reducer = (state, action) => {
         case "RATING_ABOVE_4_STAR": return {...state, ratingAbove4: action.payload};
         case "SHOW_NEW_PRODUCT": return {...state, newProduct: action.payload};
         case "PRICE_RANGE": return {...state, range: action.payload};
+        case "SEARCH_PRODUCT": return {...state, searchProducts: action.payload};
+        case "ADD_ADDRESS" : 
+        return {...state, addresses: [...state.addresses, action.payload]};
+        case "EDIT_ADDRESS" : 
+            console.log("called")
+            const editedAddress = state.addresses.map(address => address._id === action.payload._id ? action.payload : address);
+            return {...state, addresses: editedAddress};
+        case "DELETE_ADDRESS" :
+            const findAddress = state.addresses.filter(address => address._id!==action.payload);
+            return {...state, addresses: findAddress};
+        case "DEFAULT_ADDRESS" : 
+            const setDefaultAddress = state.addresses.map(address => 
+                address._id===action.payload ? {...address, setAsDefault:true}
+                : {...address, setAsDefault:false}); 
+            return { ...state, addresses: setDefaultAddress };       
         case "CLEAR_FILTERS": return defaultFilter;
         default: return state;
     }

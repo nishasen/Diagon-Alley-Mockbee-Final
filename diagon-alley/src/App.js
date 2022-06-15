@@ -5,7 +5,9 @@ import { LandingPage,
   Wishlist,
   Cart,
   ProductListing,
-  ProductDetail 
+  ProductDetail, 
+  Address,
+  Checkout
 } from './Pages';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -25,10 +27,10 @@ return (
     <Route path="/forgot-password" element={<ForgotPassword />} />
     <Route path="/wishlist" element={<Wishlist />} />
     <Route path="/cart" element={<Cart />} />
-    <Route path="/product-listing" element={<ProductListing />} />
-    <Route path="/product-listing/product-detail" element={<ProductDetail />} />
     <Route path="/product-listing/:pathname" element={<ProductListing />} />
-    <Route path="/product-listing/:pathname/product-detail" element={<ProductDetail />} />
+    <Route path="/product-details/:id" element={<ProductDetail />} />
+    <Route path="/address" element={<Address />} />
+    <Route path="/checkout" element={<Checkout />} />
     <Route path="/mockman" element={<MockAPI/>} />
   </Routes>
 </div>

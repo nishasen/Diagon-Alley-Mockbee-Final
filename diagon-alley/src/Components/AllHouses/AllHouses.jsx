@@ -5,7 +5,6 @@ import { useTheme } from '../../Context';
 import { HouseDetails } from '../../GeneralFunctions';
 import { setHouseTitle } from '../../ThemeSetFunctions';
 
-
 const AllHouses = (props) => {
   const { state } = useTheme();
   const houseTitle = setHouseTitle(state);
