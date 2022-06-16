@@ -24,6 +24,9 @@ const FilterNav = () => {
                     dispatch({type: "HOME_HOUSE", payload: pathname[0].toUpperCase()+pathname.slice(1)});
                     setCategoryFilter(true);
                 }
+                else if(pathname==="all-products") {
+                    dispatch({type: "CLEAR_FILTERS"})
+                }
                 else {
                     dispatch({type: "HOME_CATEGORY", payload: pathname[0].toUpperCase()+pathname.slice(1)});
                     setHouseFilter(true);
